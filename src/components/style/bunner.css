@@ -1,0 +1,47 @@
+.bunner {
+    height: 60vh;
+    color: #fff;
+    background-color: #777;
+    position: relative;
+    padding-bottom: 20vh;
+}
+
+.bunner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    box-shadow: inset 0px -130px 14px rgb(0 0 0 / 30%);
+    z-index: -1;
+}
+
+.bunner .bunner_content {
+    padding: 30vh 10px 0;
+    max-width: 320px;
+}
+
+.bunner .bunner_buttons {
+    padding: 10px ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bunner .bunner_buttons button {
+    padding: 5px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #555;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bunner .bunner_buttons button:hover:first-child {
+    background-color: #999;
+}
+

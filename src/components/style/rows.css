@@ -1,0 +1,31 @@
+.rows {
+    color: #fff;
+    padding: 15px;
+}
+
+.rows h2 {
+    padding: 15px 0;
+}
+
+.rows .row_images {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.rows .row_images::-webkit-scrollbar {
+    background: #111;
+}
+
+.rows .row_images img {
+    width: 280px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.rows .row_images img:hover {
+    transform: scale(1.1);
+}

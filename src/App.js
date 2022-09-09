@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navigation from './components/Navigation';
+import Bunner from './components/Bunner';
+import Rows from './components/Rows';
+import Footer from './components/Footer';
+import requests from './config/Request';
+import {Routes, Route} from 'react-router-dom';
+import Video from './components/Video';
+import Eror from './components/Eror';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+        <Routes>
+          <Route path='/' element={
+            <>
+              <Navigation />
+              <Bunner />
+              <Rows title={"Programme Origineaux Netflix"} fetchUrl={requests.fetchNetflixOriginals}/>
+              <Rows title={"Tendence Actuelle"} fetchUrl={requests.fetchTrending} isPoster={true}/>
+              <Rows title={"Film De Horror"} fetchUrl={requests.fetchTrending}/>
+              <Footer />
+            </>
+          }
+          />        
+          <Route path='/video/:id' element={<Video />}/> 
+          <Route path='*' element={<Eror />}/> 
+        </Routes>
     </div>
   );
-}
+};
 
 export default App;

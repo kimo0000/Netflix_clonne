@@ -1,0 +1,82 @@
+.navigation {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(74,74,74, 0.4));
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    transition: .3s ease-in;
+    z-index: 1;
+}
+
+.navigation.nav_black {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.navigation .burger_logo {
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+} 
+
+.navigation .burger_logo .menu {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .navigation .burger_logo .menu {
+        display: none;
+    }
+}
+
+.navigation .burger_logo img {
+    width: 100%;
+}
+
+.navigation .links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    visibility: visible;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .navigation .links {
+        visibility: hidden;
+    }
+
+    .navigation .links {
+        position: absolute;
+        top: 65px;
+        left: -110%;
+        padding: 10px;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #000;
+        visibility: visible;
+        transition: left .3s;
+    }
+
+    .navigation .links.show_links {
+        left: 0;
+    }
+
+}
+
+.navigation .actions {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 10px;
+    padding-right: 40px;
+}

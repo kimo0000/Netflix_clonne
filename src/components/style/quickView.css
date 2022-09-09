@@ -1,0 +1,41 @@
+.quick_view {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);   
+    width: 90%;
+    max-width: 1000px;
+    height: 84%;
+    background-color: #444;
+    z-index: 2;
+    padding: 100px 5px 15px;
+    width: 80%;
+    padding: 15px;
+    border-radius: 12px;
+    display: none;
+    border: 2px solid #ddd;
+}
+
+.quick_view.open {
+    display: block;
+}
+
+.quick_view .quick_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    font-weight: 900;
+    background-color: #f50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.quick_view .quick_content {
+    position: absolute;
+    top: 50%;
+    max-width: 320px;
+    padding: 15px 0;
+}
